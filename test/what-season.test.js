@@ -266,6 +266,9 @@ describe('What season', () => {
 
             Object.setPrototypeOf(deeperFakeDate, Object.getPrototypeOf(new Date()));
 
+            // console.log ("Ono3: ");
+            // console.log (deeperFakeDate instanceof Date);
+            // console.log (deeperFakeDate.hasOwnProperty('toJSON'));
             try {
                 getSeason(deeperFakeDate)
             } catch(err) {
