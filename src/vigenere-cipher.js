@@ -30,7 +30,6 @@ class VigenereCipheringMachine {
       if (this.alpabet.includes(mes[i])) {
         let position = this.alpabet.indexOf(mes[i]) + this.alpabet.indexOf(k[j])
         code.push(this.alpabet[position % this.alpabet.length]);
-        
       }
       else {
         code.push(mes[i]);

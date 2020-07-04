@@ -5,13 +5,9 @@ module.exports = function getSeason(date) {
     return "Unable to determine the time of year!";
   }
 
-  // if (! (date instanceof Date)) {
-  //   throw new Error();
-  // }
-
-  // if (!date.hasOwnProperty('toJSON')) {
-  //   throw new TypeError ();
-  // }
+  if (Object.prototype.toString.call(date) !== "[object Date]") {
+    throw new Error('Argument is not a date!');
+  }
 
   switch (date.getMonth()) {
     case 0:
@@ -30,8 +26,6 @@ module.exports = function getSeason(date) {
     case 9:
     case 10:
       return "autumn";
-    // default:
-    //   throw new Error();
   }
 };
 
